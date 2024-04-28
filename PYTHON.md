@@ -1,17 +1,27 @@
 # Python Notes
 
-### Before running file (Rest-API)
+### Running files (Rest-API)
 
-`pip install python-dotenv`
+```
+pip install python-dotenv
+python rest-client.py
+```
 
-`python rest-client.py`
+### Adding packages for SDK
 
-### Before running file (SDK-API)
+```
+pip install azure-ai-textanalytics==5.3.0
+```
 
-`pip install azure-ai-textanalytics==5.3.0`
+### AI Vision
 
-`python rest-client.py`
+```
+pip install azure-ai-vision-imageanalysis==1.0.0b1
+```
 
-> (401) Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.
-> Code: 401
-> Message: Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.
+```python
+# import namespaces
+from azure.ai.vision.imageanalysis import ImageAnalysisClient
+from azure.ai.vision.imageanalysis.models import VisualFeatures
+from azure.core.credentials import AzureKeyCredential
+```
