@@ -1,3 +1,5 @@
+#C# Command Notes
+
 Running Files
 dotnet run
 
